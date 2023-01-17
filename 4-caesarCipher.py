@@ -13,7 +13,8 @@ shift_value = int(input("Enter a shift value:\n"))
 def encrypt(text, shift):
   code=""
   for letter in message:
-    for letter in alphabet:
-      code += alphabet[shift+1]
+    idx = alphabet.index(letter)
+    # letter_code = alphabet[idx + shift]
+    code += alphabet[idx + shift]
   print(code)
 encrypt('hello', 5)
